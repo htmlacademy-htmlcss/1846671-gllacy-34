@@ -13,7 +13,7 @@
   <header class="header-container">
     <nav class="header-nav">
       <div class="header-logo">
-        <a href="index.html" class="header-logo-link">
+        <a href="index.html" class="header-logo-link" aria-current="page">
           <img src="/images/logo.svg" alt="Логотип магазина мороженого Глейси." width="137" height="56">
         </a>
       </div>
@@ -72,10 +72,12 @@
                  alt="Сливочный пломбир в вафельном рожке, обильно политый клубничным джемом.">
           </div>
           <div class="slide-additional-images">
-            <img src="/images/products/banana-cone.png" class="slider-img additional-slider-img"
-                 alt="Банановое мороженое вафельном рожке на втором плане." height="507" width="306">
-            <img src="/images/products/caramel-cone.png" class="slider-img additional-slider-img"
-                 alt="Карамельный пломбир в вафельном рожке на втором плане." height="507" width="306">
+            <div class="additional-image-container additional-banana-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
+            <div class="additional-image-container additional-caramel-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
           </div>
         </li>
         <li class="slide-container banana-slide">
@@ -92,10 +94,12 @@
                  height="507" width="306">
           </div>
           <div class="slide-additional-images">
-            <img src="/images/products/strawberry-cone.png" class="slider-img additional-slider-img"
-                 alt="Клубничный пломбир в вафельном рожке на втором плане." height="507" width="306">
-            <img src="/images/products/caramel-cone.png" class="slider-img additional-slider-img"
-                 alt="Карамельный пломбир в вафельном рожке на втором плане." height="507" width="306">
+            <div class="additional-image-container additional-caramel-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
+            <div class="additional-image-container additional-strawberry-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
           </div>
         </li>
         <li class="slide-container caramel-slide">
@@ -112,10 +116,12 @@
                  height="507" width="306">
           </div>
           <div class="slide-additional-images">
-            <img src="/images/products/strawberry-cone.png" class="slider-img additional-slider-img"
-                 alt="Клубничный пломбир в вафельном рожке на втором плане." height="507" width="306">
-            <img src="/images/products/banana-cone.png" class="slider-img additional-slider-img"
-                 alt="Банановое мороженое вафельном рожке на втором плане." height="507" width="306">
+            <div class="additional-image-container additional-strawberry-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
+            <div class="additional-image-container additional-banana-image">
+              <span class="visually-hidden">Дополнительное мороженое на слайде.</span>
+            </div>
           </div>
         </li>
       </ul>
@@ -173,7 +179,7 @@
       <ul class="gifts-list">
         <li class="gift-item">
           <div class="gift-item-block">
-            <h3 class="section-subheader">Малинка даром!</h3>
+            <h3 class="section-subheader gift-header">Малинка даром!</h3>
             <p class="info-description gift-info">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
               банку малинового варенья бесплатно.</p>
             <button class="btn-light" type="button">Хочу подарок</button>
@@ -185,7 +191,7 @@
         </li>
         <li class="gift-item">
           <div class="gift-item-block">
-            <h3 class="section-subheader">Маршмеллоу даром!</h3>
+            <h3 class="section-subheader gift-header">Маршмеллоу даром!</h3>
             <p class="info-description gift-info">При покупке 2 кг пломбира добавим<br>в ваш заказ упаковку нежных<br>зефирок
               совершенно бесплатно.</p>
             <button class="btn-light" type="button">Хочу подарок</button>
@@ -308,9 +314,7 @@
       <div class="delivery-info-container">
         <h2 class="section-header delivery-header">Доставка любимого мороженого на дом</h2>
         <p class="info-description delivery-description">Хочется полакомиться любимым десертом,<br>но нет времени
-          съездить
-          в магазин? Закажите
-          доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+          съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
       </div>
       <div class="delivery-form-container">
         <h3 class="visually-hidden">Форма заказа.</h3>
@@ -318,31 +322,29 @@
           Укажите адрес и дату доставки, и мы свяжемся<br>с вами, чтобы подтвердить заказ.
         </p>
         <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
-          <div class="delivery-fields-container">
-            <div class="delivery-field">
-              <div class="button-info-container">
-                <label for="date-input" class="input-label">Дата</label>
-<!--                <button class="additional-info-icon">-->
-<!--                  <span class="visually-hidden">Показать пояснение.</span>-->
-<!--                </button>-->
-              </div>
-              <input type="text" class="input" id="date-input" placeholder="01.04.2020" required>
-            </div>
-            <div class="delivery-field">
-              <label for="phone-input" class="input-label">Телефон</label>
-              <input type="tel" class="input" id="phone-input" placeholder="+7 800 999-00-00" required>
-            </div>
-          </div>
           <div class="delivery-field">
             <div class="button-info-container">
+              <label for="date-input" class="input-label">Дата</label>
+              <button class="additional-info-icon">
+                <span class="visually-hidden">Показать пояснение.</span>
+              </button>
+            </div>
+            <input type="text" class="input" id="date-input" placeholder="01.04.2020" required>
+          </div>
+          <div class="delivery-field">
+            <label for="phone-input" class="input-label">Телефон</label>
+            <input type="tel" class="input" id="phone-input" placeholder="+7 800 999-00-00" required>
+          </div>
+          <div class="delivery-field address-delivery-field">
+            <div class="button-info-container">
               <label for="address-input" class="input-label">Адрес</label>
-<!--              <button class="additional-info-icon">-->
-<!--                <span class="visually-hidden">Показать пояснение.</span>-->
-<!--              </button>-->
+              <button class="additional-info-icon">
+                <span class="visually-hidden">Показать пояснение.</span>
+              </button>
             </div>
             <input type="text" class="input" id="address-input" placeholder="ул. Большая Конюшенная, 19/8" required>
           </div>
-          <button class="btn-dark" type="submit">Отправить</button>
+          <button class="btn-dark delivery-form-button" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -362,34 +364,46 @@
   </main>
   <footer class="footer-container">
     <ul class="social-list">
-      <li class="social-item">
-        <a href="https://t.me/htmlacademy" class="social-button tg-button">
+      <li class="social-item footer-social-item">
+        <a href="https://t.me/htmlacademy" class="social-button footer-social-button tg-button">
           <span class="visually-hidden">Ссылка на телеграм-канал магазина.</span>
         </a>
       </li>
-      <li class="social-item">
-        <a href="https://vk.com/htmlacademy" class="social-button vk-button">
+      <li class="social-item footer-social-item">
+        <a href="https://vk.com/htmlacademy" class="social-button footer-social-button vk-button">
           <span class="visually-hidden">Ссылка на группу в ВК магазина.</span>
         </a>
       </li>
-      <li class="social-item">
-        <a href="https://www.youtube.com/user/htmlacademyru" class="social-button yt-button">
+      <li class="social-item footer-social-item">
+        <a href="https://www.youtube.com/user/htmlacademyru" class="social-button footer-social-button yt-button">
           <span class="visually-hidden">Ссылка на ютуб-канал магазина.</span>
         </a>
       </li>
     </ul>
-    <ul class="footer-menu-list">
-      <li class="footer-menu-item favorite-menu-item"><a href="#" class="footer-menu-link">Для поставщиков</a></li>
-      <li class="footer-menu-item"><a href="#" class="footer-menu-link">Наши документы</a></li>
-      <li class="footer-menu-item"><a href="#" class="footer-menu-link">О производстве</a></li>
-      <li class="footer-menu-item"><a href="#" class="footer-menu-link">Экологические стандарты</a></li>
-    </ul>
+    <nav class="site-pages">
+      <h3 class="visually-hidden">Информация для поставщиков и покупателей.</h3>
+      <ul class="footer-menu-list">
+        <li class="footer-menu-item favorite-menu-item">
+          <a href="#" class="footer-menu-link">Для поставщиков</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-link">Наши документы</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-link">О производстве</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-link">Экологические стандарты</a>
+        </li>
+      </ul>
+    </nav>
     <div class="developer-info-container">
       <a class="developer-logo-link" href="https://htmlacademy.ru/">
         <img src="/images/logo-academy.svg" alt="Логотип разработчика сайта магазина" class="developer-logo" width="93"
              height="27">
       </a>
-      <p class="subinfo-description">Сделано в .html academy © 2021</p>
+      <p class="subinfo-description">Сделано в <a href="https://htmlacademy.ru/" class="academy-link">.html academy</a>
+        © 2021</p>
     </div>
   </footer>
 </div>
