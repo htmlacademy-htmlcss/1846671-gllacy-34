@@ -29,11 +29,9 @@
         </li>
       </ul>
       <div class="header-nav-block">
-        <div class="header-phone-block">
-          <address>
-            <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
-          </address>
-        </div>
+        <address class="header-address">
+          <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
+        </address>
         <ul class="actions-list">
           <li class="action-item">
             <a href="#" class="user-menu-link search-link">
@@ -177,7 +175,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="btn-light catalog-show-button">Применить</button>
+          <button type="submit" class="catalog-show-button">Применить</button>
         </div>
       </form>
     </section>
@@ -338,7 +336,9 @@
       <div class="product-actions-container">
         <button type="button" class="btn-light catalog-show-more">Показать еще</button>
         <div class="pagination-container">
-          <a class="pagination-link prev-catalog-page catalog-page-button" href="#">назад</a>
+          <button type="button" class="pagination-link prev-catalog-page catalog-page-button" disabled>
+            <span class="visually-hidden">назад</span>
+          </button>
           <ol class="pagination-numbers-list">
             <li class="pagination-item">
               <a class="pagination-link" href="#" aria-current="page">1</a>
@@ -347,7 +347,7 @@
               <a class="pagination-link" href="#">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="pagination-link active-pagination-link" href="#">3</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">4</a>
@@ -356,7 +356,9 @@
               <a class="pagination-link" href="#">5</a>
             </li>
           </ol>
-          <a class="pagination-link next-catalog-page catalog-page-button" href="#">вперёд</a>
+          <button type="button" class="pagination-link next-catalog-page catalog-page-button">
+            <span class="visually-hidden">вперёд</span>
+          </button>
         </div>
       </div>
     </section>
