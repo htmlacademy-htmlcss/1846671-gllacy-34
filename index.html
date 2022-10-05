@@ -59,7 +59,7 @@
               <ul class="search-fields-list">
                 <li class="search-field-item">
                   <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по сайту.</label>
-                  <input type="text" class="search-popover-input input" name="search-popover-input" id="search-popover-input" placeholder="Поиск по сайту">
+                  <input type="text" class="search-popover-input input" name="search-popover-input" id="search-popover-input" placeholder="Поиск по сайту" required>
                 </li>
               </ul>
             </form>
@@ -400,9 +400,9 @@
               <label for="date-input" class="input-label">Дата</label>
               <button type="button" class="additional-info-icon">
                 <span class="visually-hidden">Показать пояснение.</span>
-                <div class="additional-info-block">
-                  Введите название<br>улицы, дома и квартиры
-                </div>
+                <span class="additional-info-block">
+                  Введите нужную Вам<br>дату доставки
+                </span>
               </button>
             </div>
             <input type="text" class="input" id="date-input" name="date-input" placeholder="01.04.2020" required>
@@ -416,6 +416,9 @@
               <label for="address-input" class="input-label">Адрес</label>
               <button type="button" class="additional-info-icon">
                 <span class="visually-hidden">Показать пояснение.</span>
+                <span class="additional-info-block">
+                  Введите название<br>улицы, дома и квартиры
+                </span>
               </button>
             </div>
             <input type="text" class="input" id="address-input" name="address-input" placeholder="ул. Большая Конюшенная, 19/8" required>
@@ -459,8 +462,8 @@
     <nav class="site-pages">
       <h3 class="visually-hidden">Информация для поставщиков и покупателей.</h3>
       <ul class="footer-menu-list">
-        <li class="footer-menu-item">
-          <a href="#" class="footer-menu-link favorite-menu-link">Для поставщиков</a>
+        <li class="footer-menu-item favorite-menu-link">
+          Для поставщиков
         </li>
         <li class="footer-menu-item">
           <a href="#" class="footer-menu-link">Наши документы</a>
