@@ -11,6 +11,7 @@
 <body>
 <div class="page-container">
   <header class="catalog-header-container">
+    <h1 class="visually-hidden">Каталог магазина мороженого Gllacy.</h1>
     <nav class="header-nav catalog-header-nav">
       <div class="header-logo">
         <a href="index.html" class="header-logo-link">
@@ -22,19 +23,19 @@
           <a href="catalog.html" class="header-nav-link active-nav-link popover-menu-link" aria-current="page">Каталог</a>
           <ul class="catalog-dropdown-list">
             <li class="catalog-dropdown-item">
-              <a class="catalog-dropdown-link main-catalog-dropdown-link" href="#">Новинки</a>
+              <a href="#" class="catalog-dropdown-link main-catalog-dropdown-link">Новинки</a>
             </li>
             <li class="catalog-dropdown-item">
-              <a class="catalog-dropdown-link" href="#">Сливочное</a>
+              <a href="#" class="catalog-dropdown-link">Сливочное</a>
             </li>
             <li class="catalog-dropdown-item">
-              <a class="catalog-dropdown-link" href="#">Щербеты</a>
+              <a href="#" class="catalog-dropdown-link">Щербеты</a>
             </li>
             <li class="catalog-dropdown-item">
-              <a class="catalog-dropdown-link" href="#">Фруктовый лед</a>
+              <a href="#" class="catalog-dropdown-link">Фруктовый лед</a>
             </li>
             <li class="catalog-dropdown-item">
-              <a class="catalog-dropdown-link" href="#">Мелорин</a>
+              <a href="#" class="catalog-dropdown-link">Мелорин</a>
             </li>
           </ul>
         </li>
@@ -47,7 +48,7 @@
       </ul>
       <div class="header-nav-block">
         <address class="header-address">
-          <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a href="tel:+78005558628" class="header-phone-link">+7 800 555-86-28</a>
         </address>
         <ul class="actions-list">
           <li class="action-item search-active-item choosed-link">
@@ -57,10 +58,8 @@
             <form action="https://echo.htmlacademy.ru/" method="post" class="search-popover">
               <ul class="search-fields-list">
                 <li class="search-field-item">
-                  <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по
-                    сайту.</label>
-                  <input type="text" class="search-popover-input input" id="search-popover-input"
-                         placeholder="Поиск по сайту">
+                  <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по сайту.</label>
+                  <input type="text" class="search-popover-input input" name="search-popover-input" id="search-popover-input" placeholder="Поиск по сайту">
                 </li>
               </ul>
             </form>
@@ -71,16 +70,12 @@
               <h2 class="section-subheader popover-header">Личный кабинет</h2>
               <ul class="login-fields-list">
                 <li class="login-field-item">
-                  <label for="email-popover-input" class="visually-hidden">Поле ввода email для авторизации на
-                    сайте.</label>
-                  <input type="email" class="login-popover-input input" name="email-popover-input"
-                         id="email-popover-input" value="email@example.com" placeholder="Введите ваш email" required>
+                  <label for="email-popover-input" class="visually-hidden">Поле ввода email для авторизации на сайте.</label>
+                  <input type="email" class="login-popover-input input" name="email-popover-input" id="email-popover-input" value="email@example.com" placeholder="Введите ваш email" required>
                 </li>
                 <li class="login-field-item">
-                  <label for="password-popover-input" class="visually-hidden">Поле ввода пароля для авторизации на
-                    сайте.</label>
-                  <input type="password" class="login-popover-input input" name="password-popover-input"
-                         id="password-popover-input" value="123456" placeholder="Введите ваш пароль" required>
+                  <label for="password-popover-input" class="visually-hidden">Поле ввода пароля для авторизации на сайте.</label>
+                  <input type="password" class="login-popover-input input" name="password-popover-input" id="password-popover-input" value="123456" placeholder="Введите ваш пароль" required>
                 </li>
               </ul>
               <div class="popover-actions-container">
@@ -110,15 +105,14 @@
     </nav>
     <ol class="breadcrumbs-list">
       <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link" href="index.html">Главная</a>
+        <a href="index.html" class="breadcrumbs-link">Главная</a>
       </li>
       <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link active-breadcrumbs-link" href="catalog.html" aria-current="page">Каталог</a>
+        <a href="catalog.html" class="breadcrumbs-link active-breadcrumbs-link" aria-current="page">Каталог</a>
       </li>
     </ol>
   </header>
   <main class="main-container">
-    <h1 class="visually-hidden">Каталог магазина мороженого Gllacy.</h1>
     <section class="section filters-section">
       <h2 class="section-header catalog-header">Сливочное мороженое</h2>
       <form action="https://echo.htmlacademy.ru/" method="post" class="catalog-filters-container">
@@ -148,10 +142,10 @@
             <div class="range">
               <div class="range-scale">
                 <div class="range-bar">
-                  <button class="range-toggle toggle-min" type="button">
+                  <button type="button" class="range-toggle toggle-min">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="range-toggle toggle-max" type="button">
+                  <button type="button" class="range-toggle toggle-max">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
@@ -238,7 +232,7 @@
       </form>
     </section>
     <section class="catalog-products-section">
-      <h2 class="visually-hidden">Товары магазина мороженого Gllacy</h2>
+      <h2 class="visually-hidden">Товары магазина мороженого Gllacy.</h2>
       <ul class="products-list catalog-products-list">
         <li class="product-item">
           <img src="images/products/raspberry.png" alt="" class="product-image" width="192" height="184">
@@ -246,7 +240,7 @@
           <p class="info-description product-card-description">Сливочное мороженое с малиновым джемом</p>
           <div class="product-options-container">
             <p class="product-price">310 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -259,7 +253,7 @@
           <p class="info-description product-card-description">Фисташковый пломбир с кусочками шоколада</p>
           <div class="product-options-container">
             <p class="product-price">340 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -272,7 +266,7 @@
           <p class="info-description product-card-description">Крем-брюле<br>с черничным джемом</p>
           <div class="product-options-container">
             <p class="product-price">330 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -285,7 +279,7 @@
           <p class="info-description product-card-description">Ванильный пломбир<br>со сладкой посыпкой</p>
           <div class="product-options-container">
             <p class="product-price">320 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -296,7 +290,7 @@
           <p class="info-description product-card-description">Сливочное мороженое<br>с ежевичным джемом</p>
           <div class="product-options-container">
             <p class="product-price">330 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -309,7 +303,7 @@
           <p class="info-description product-card-description">Сливочный пломбир<br>с банановым вкусом</p>
           <div class="product-options-container">
             <p class="product-price">340 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -322,7 +316,7 @@
           <p class="info-description product-card-description">Классический шоколадный пломбир</p>
           <div class="product-options-container">
             <p class="product-price">270 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -335,7 +329,7 @@
           <p class="info-description product-card-description">Сливочный пломбир<br>с клубничным вкусом</p>
           <div class="product-options-container">
             <p class="product-price">300 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -346,7 +340,7 @@
           <p class="info-description product-card-description">Освежающий лимонный сорбет</p>
           <div class="product-options-container">
             <p class="product-price">310 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -359,7 +353,7 @@
           <p class="info-description product-card-description">Сливочный пломбир<br>с ментоловым сиропом</p>
           <div class="product-options-container">
             <p class="product-price">320 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -372,7 +366,7 @@
           <p class="info-description product-card-description">Фисташковый пломбир<br>с шоколадным сиропом</p>
           <div class="product-options-container">
             <p class="product-price">360 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -385,7 +379,7 @@
           <p class="info-description product-card-description">Классическое<br>крем-брюле</p>
           <div class="product-options-container">
             <p class="product-price">280 ₽/кг</p>
-            <button class="basket-button" type="button">
+            <button type="button" class="basket-button">
               <span class="visually-hidden">Добавить товар в корзину.</span>
             </button>
           </div>
@@ -395,27 +389,27 @@
         <button type="button" class="btn-light catalog-show-more">Показать еще</button>
         <div class="pagination-container">
           <button type="button" class="pagination-link prev-catalog-page catalog-page-button" disabled>
-            <span class="visually-hidden">назад</span>
+            <span class="visually-hidden">назад.</span>
           </button>
           <ol class="pagination-numbers-list">
             <li class="pagination-item">
-              <a class="pagination-link" href="#" aria-current="page">1</a>
+              <a href="#" class="pagination-link" aria-current="page">1</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a href="#" class="pagination-link">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link active-pagination-link" href="#">3</a>
+              <a href="#" class="pagination-link active-pagination-link">3</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
+              <a href="#" class="pagination-link">4</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">5</a>
+              <a href="#" class="pagination-link">5</a>
             </li>
           </ol>
           <button type="button" class="pagination-link next-catalog-page catalog-page-button">
-            <span class="visually-hidden">вперёд</span>
+            <span class="visually-hidden">вперёд.</span>
           </button>
         </div>
       </div>
@@ -457,12 +451,12 @@
       </ul>
     </nav>
     <div class="developer-info-container">
-      <a class="developer-logo-link" href="https://htmlacademy.ru/">
-        <img src="/images/logo-academy.svg" alt="Логотип разработчика сайта магазина" class="developer-logo" width="93"
-             height="27">
+      <a href="https://htmlacademy.ru/" class="developer-logo-link">
+        <img src="/images/logo-academy.svg" alt="Логотип разработчика сайта магазина" class="developer-logo" width="93" height="27">
       </a>
-      <p class="subinfo-description">Сделано в <a href="https://htmlacademy.ru/" class="academy-link">.html academy</a>
-        © 2021</p>
+      <p class="subinfo-description">
+        Сделано в <a href="https://htmlacademy.ru/" class="academy-link">.html academy</a>© 2021
+      </p>
     </div>
   </footer>
 </div>
