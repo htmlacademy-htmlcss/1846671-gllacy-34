@@ -18,8 +18,25 @@
         </a>
       </div>
       <ul class="header-nav-list">
-        <li class="header-nav-item">
-          <a href="catalog.html" class="header-nav-link">Каталог</a>
+        <li class="header-nav-item choosed-link">
+          <a href="catalog.html" class="header-nav-link popover-menu-link">Каталог</a>
+          <ul class="catalog-dropdown-list">
+            <li class="catalog-dropdown-item main-catalog-dropdown-item">
+              <a class="catalog-dropdown-link main-catalog-dropdown-link" href="#">Новинки</a>
+            </li>
+            <li class="catalog-dropdown-item">
+              <a class="catalog-dropdown-link" href="#">Сливочное</a>
+            </li>
+            <li class="catalog-dropdown-item">
+              <a class="catalog-dropdown-link" href="#">Щербеты</a>
+            </li>
+            <li class="catalog-dropdown-item">
+              <a class="catalog-dropdown-link" href="#">Фруктовый лед</a>
+            </li>
+            <li class="catalog-dropdown-item">
+              <a class="catalog-dropdown-link" href="#">Мелорин</a>
+            </li>
+          </ul>
         </li>
         <li class="header-nav-item">
           <a href="#" class="header-nav-link">Доставка и оплата</a>
@@ -33,19 +50,90 @@
           <a class="header-phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
         </address>
         <ul class="actions-list">
-          <li class="action-item">
-            <a href="#" class="user-menu-link search-link">
+          <li class="action-item search-active-item choosed-link">
+            <a href="#" class="user-menu-link search-link popover-menu-link">
               <span class="visually-hidden">Поиск.</span>
             </a>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="search-popover">
+              <ul class="search-fields-list">
+                <li class="search-field-item">
+                  <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по
+                    сайту.</label>
+                  <input type="text" class="search-popover-input input" id="search-popover-input"
+                         placeholder="Поиск по сайту">
+                </li>
+              </ul>
+            </form>
           </li>
-          <li class="action-item">
-            <a href="#" class="user-menu-link entrance-link">Вход</a>
+          <li class="action-item action-active-item choosed-link">
+            <a href="#" class="user-menu-link entrance-link popover-menu-link">Вход</a>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="login-popover">
+              <h2 class="section-subheader popover-header">Личный кабинет</h2>
+              <ul class="login-fields-list">
+                <li class="login-field-item">
+                  <label for="email-popover-input" class="visually-hidden">Поле ввода email для авторизации на
+                    сайте.</label>
+                  <input type="email" class="login-popover-input input" name="email-popover-input"
+                         id="email-popover-input" value="email@example.com" placeholder="Введите ваш email" required>
+                </li>
+                <li class="login-field-item">
+                  <label for="password-popover-input" class="visually-hidden">Поле ввода пароля для авторизации на
+                    сайте.</label>
+                  <input type="password" class="login-popover-input input" name="password-popover-input"
+                         id="password-popover-input" value="123456" placeholder="Введите ваш пароль" required>
+                </li>
+              </ul>
+              <div class="popover-actions-container">
+                <button type="submit" class="btn-dark login-popover-main-link">Войти</button>
+                <ul class="login-popover-links-list">
+                  <li class="login-popover-link-item">
+                    <a href="#" class="login-popover-link">Забыли пароль?</a>
+                  </li>
+                  <li class="login-popover-link-item">
+                    <a href="#" class="login-popover-link">Регистрация</a>
+                  </li>
+                </ul>
+              </div>
+            </form>
           </li>
-          <li class="action-item">
-            <a href="#" class="user-menu-link basket-link">
+          <li class="action-item basket-item choosed-link">
+            <a href="#" class="user-menu-link basket-link popover-menu-link">
               2 товара
               <span class="visually-hidden">Корзина.</span>
             </a>
+            <div class="basket-popover">
+              <h2 class="section-subheader">Корзина</h2>
+              <ul class="basket-fields-list">
+                <li class="basket-field-item">
+                  <a href="#" class="basket-product-link">
+                    <div class="basket-product-container raspberry-product-container">
+                      <h3 class="basket-product-popover-header">Малинка</h3>
+                      <p class="product-info">1 кг х 310 ₽</p>
+                    </div>
+                  </a>
+                  <p class="basket-product-price">310 ₽</p>
+                  <button type="button" class="basket-delete-button">
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
+                  </button>
+                </li>
+                <li class="basket-field-item">
+                  <a href="#" class="basket-product-link">
+                    <div class="basket-product-container bubble-product-container">
+                      <h3 class="basket-product-popover-header">Бабл-гам</h3>
+                      <p class="product-info">1,5 кг х 320 ₽</p>
+                    </div>
+                  </a>
+                  <p class="basket-product-price">480 ₽</p>
+                  <button type="button" class="basket-delete-button">
+                    <span class="visually-hidden">Удалить товар из корзины.</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="popover-actions-container">
+                <button type="submit" class="btn-dark basket-popover-main-link">Оформить заказ</button>
+                <p class="basket-popover-total">Итого: 790 ₽</p>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -361,7 +449,7 @@
     </section>
   </main>
   <footer class="footer-container">
-    <ul class="social-list">
+    <ul class="social-list footer-social-list">
       <li class="social-item footer-social-item">
         <a href="https://t.me/htmlacademy" class="social-button footer-social-button tg-button">
           <span class="visually-hidden">Ссылка на телеграм-канал магазина.</span>
@@ -381,8 +469,8 @@
     <nav class="site-pages">
       <h3 class="visually-hidden">Информация для поставщиков и покупателей.</h3>
       <ul class="footer-menu-list">
-        <li class="footer-menu-item favorite-menu-item">
-          <a href="#" class="footer-menu-link">Для поставщиков</a>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-link favorite-menu-link">Для поставщиков</a>
         </li>
         <li class="footer-menu-item">
           <a href="#" class="footer-menu-link">Наши документы</a>
@@ -404,6 +492,37 @@
         © 2021</p>
     </div>
   </footer>
+  <div class="modal-container modal-container-close">
+    <div class="modal">
+      <section class="modal-content">
+        <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="feedback-input-container">
+            <label class="visually-hidden" for="feedback-input-name">Имя и фамилия.</label>
+            <input class="feedback-input input feedback-input-text" type="text" id="feedback-input-name"
+                   name="feedback-input-name"
+                   placeholder="Имя и фамилия" required>
+          </div>
+          <div class="feedback-input-container">
+            <label class="visually-hidden" for="feedback-input-email">Email.</label>
+            <input class="feedback-input input feedback-input-text" type="email" id="feedback-input-email"
+                   name="feedback-input-email"
+                   placeholder="email@example.com" required>
+          </div>
+          <div class="feedback-input-container">
+            <label class="visually-hidden" for="feedback-input-textarea">Ваш вопрос.</label>
+            <textarea class="feedback-input input feedback-input-textarea" type="text" id="feedback-input-textarea"
+                      name="feedback-input-textarea"
+                      placeholder="В свободной форме" rows="6" required></textarea>
+          </div>
+          <button class="btn-dark feedback-button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
 </div>
 </body>
 </html>
