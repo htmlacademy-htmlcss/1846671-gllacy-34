@@ -2271,14 +2271,62 @@ body {
 
 .search-popover-button:hover {
   background-color: #FFCBD8;
+  border-right: none;
 }
 
 .search-popover-button:active {
   background-color: #FF7799;
+  border-right: none;
 }
 
 .search-popover-button:focus-visible {
   background-color: #FF4A78;
+  border-right: none;
+}
+
+.search-popover-input:hover {
+  border-color: #2D3440;
+  border-right: none;
+}
+
+.search-popover-input:active {
+  padding: 13px 15px;
+  border: 2px solid #2D3440;
+  border-right: none;
+}
+
+.search-popover-input:disabled {
+  background-color: #E7E7E7;
+  cursor: auto;
+  border-right: none;
+}
+
+.search-popover-input:empty {
+  border: 1px solid #B9B9B9;
+  border-right: none;
+}
+
+.search-popover-input:empty:hover {
+  border: 1px solid #2D3440;
+  padding: 14px;
+  border-right: none;
+}
+
+.search-popover-input:empty:active {
+  padding: 13px;
+  border: 2px solid #2D3440;
+  border-right: none;
+}
+
+.search-popover-input:invalid:not(:placeholder-shown) {
+  border-color: #EA5454;
+  border-right: none;
+}
+
+.search-popover-input:invalid:hover:not(:placeholder-shown) {
+  border: 2px solid #EA5454;
+  padding: 13px;
+  border-right: none;
 }
 
 .search-popover-input:hover + .search-popover-button,
