@@ -352,7 +352,7 @@ body {
   grid-template-columns: repeat(2, 100px);
   column-gap: 41px;
   padding-left: 62px;
-  align-content: center;
+  align-content: start;
 }
 
 .additional-image-container::after {
@@ -377,6 +377,7 @@ body {
 .additional-banana-image {
   width: 100px;
   height: 200px;
+  top: 155px;
 }
 
 .strawberry-slide .additional-caramel-image::before {
@@ -413,6 +414,7 @@ body {
   position: relative;
   width: 100px;
   height: 200px;
+  top: 155px;
 }
 
 /*Стили кнопок*/
@@ -2224,7 +2226,71 @@ body {
 }
 
 .search-popover-input {
-  width: 100%;
+  width: 278px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #b9b9b9;
+  border-right: none;
+}
+
+.search-popover-input:hover,
+.search-popover-input:active,
+.search-popover-input:focus,
+.search-popover-input:empty,
+.search-popover-input:empty:hover,
+.search-popover-input:empty:active,
+.search-popover-input:empty:focus {
+  border-right: none;
+  border-right-color: transparent;
+}
+
+.search-popover-input:empty {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: none;
+  border-right-color: #fcfcfc;
+}
+
+.search-popover-button {
+  position: absolute;
+  background-color: transparent;
+  background-position: center center;
+  background-size: 16px 16px;
+  width: 46px;
+  height: 50px;
+  background-repeat: no-repeat;
+  right: 18px;
+  top: 24px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border: 1px solid #B9B9B9;
+  border-left: none;
+}
+
+.search-popover-button:hover {
+  background-color: #FFCBD8;
+}
+
+.search-popover-button:active {
+  background-color: #FF7799;
+}
+
+.search-popover-button:focus-visible {
+  background-color: #FF4A78;
+}
+
+.search-popover-input:hover + .search-popover-button,
+.search-popover-input:active + .search-popover-button,
+.search-popover-input:focus + .search-popover-button {
+  background-image: url("../images/icons/search.svg");
+}
+
+.search-popover-button:hover,
+.search-popover-button:active,
+.search-popover-button:focus{
+  background-image: url("../images/icons/search.svg");
 }
 
 .search-fields-list {
@@ -2239,12 +2305,10 @@ body {
 
 .search-active-item:focus-within .search-popover {
   display: flex;
-  flex-direction: column;
 }
 
 .search-active-item:hover .search-popover {
   display: flex;
-  flex-direction: column;
 }
 
 .login-popover-main-link {
