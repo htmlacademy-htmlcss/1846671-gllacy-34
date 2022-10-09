@@ -56,12 +56,13 @@
               <span class="visually-hidden">Поиск.</span>
             </a>
             <form action="https://echo.htmlacademy.ru/" method="post" class="search-popover">
-              <ul class="search-fields-list">
-                <li class="search-field-item">
-                  <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по сайту.</label>
-                  <input type="text" class="search-popover-input input" name="search-popover-input" id="search-popover-input" placeholder="Поиск по сайту" required>
-                </li>
-              </ul>
+              <div class="search-popover-container">
+                <label for="search-popover-input" class="visually-hidden">Отправка запроса для поиска по сайту.</label>
+                <input type="text" class="search-popover-input" name="search-popover-input" id="search-popover-input" placeholder="Поиск по сайту" required>
+                <button type="submit" class="search-popover-button">
+                  <span class="visually-hidden">Отправить поисковый запрос.</span>
+                </button>
+              </div>
             </form>
           </li>
           <li class="action-item action-active-item choosed-link">
