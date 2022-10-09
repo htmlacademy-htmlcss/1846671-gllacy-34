@@ -2146,7 +2146,7 @@ body {
 
 /*Стили выпадающих списков и подобного*/
 .catalog-header-nav-item .catalog-dropdown-list {
-  /*display: none;*/
+  display: none;
 }
 
 .catalog-dropdown-list {
@@ -2226,107 +2226,93 @@ body {
 }
 
 .search-popover-input {
-  width: 278px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border: 1px solid #b9b9b9;
-  border-right: none;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+  padding: 14px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
-.search-popover-input:hover,
-.search-popover-input:active,
-.search-popover-input:focus,
-.search-popover-input:empty,
-.search-popover-input:empty:hover,
-.search-popover-input:empty:active,
-.search-popover-input:empty:focus {
-  border-right: none;
-  border-right-color: transparent;
+.search-popover-container {
+  display: flex;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #B9B9B9;
 }
 
-.search-popover-input:empty {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border-right: none;
-  border-right-color: #fcfcfc;
+.search-popover-input::placeholder {
+  color: #B9B9B9;
+}
+
+.search-popover-container:not(.invalid-search-popover-input):focus-within {
+  outline: 2px solid #2D3440;
+  outline-offset: -1px;
+}
+
+.search-popover-input:hover ~ .search-popover-container {
+  border-color: #2D3440;
+}
+
+.search-popover-input:hover + .search-popover-container {
+  border-color: #2D3440;
+}
+
+.search-popover-input:hover .search-popover-container {
+  border-color: #2D3440;
+}
+
+.search-popover-input:focus {
+  outline: none;
 }
 
 .search-popover-button {
-  position: absolute;
   background-color: transparent;
   background-position: center center;
   background-size: 16px 16px;
   width: 46px;
   height: 50px;
   background-repeat: no-repeat;
-  right: 18px;
-  top: 24px;
-  border-top-left-radius: 0;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 0;
-  border: 1px solid #B9B9B9;
-  border-left: none;
+  border: none;
 }
 
 .search-popover-button:hover {
-  background-color: #FFCBD8;
-  border-right: none;
+  opacity: 0.7;
 }
 
 .search-popover-button:active {
-  background-color: #FF7799;
-  border-right: none;
+  opacity: 0.5;
 }
 
 .search-popover-button:focus-visible {
-  background-color: #FF4A78;
-  border-right: none;
+  opacity: 0.3;
+  outline: none;
 }
 
-.search-popover-input:hover {
-  border-color: #2D3440;
-  border-right: none;
-}
-
-.search-popover-input:active {
-  padding: 13px 15px;
-  border: 2px solid #2D3440;
-  border-right: none;
-}
-
-.search-popover-input:disabled {
-  background-color: #E7E7E7;
-  cursor: auto;
-  border-right: none;
-}
-
-.search-popover-input:empty {
-  border: 1px solid #B9B9B9;
-  border-right: none;
-}
-
-.search-popover-input:empty:hover {
+.search-popover-container:hover {
   border: 1px solid #2D3440;
-  padding: 14px;
-  border-right: none;
 }
 
-.search-popover-input:empty:active {
-  padding: 13px;
-  border: 2px solid #2D3440;
-  border-right: none;
+/*Этот класс добавляется контейнеру search-popover-container при некорректном вводе в поле поиска по сайту*/
+.invalid-search-popover-input {
+  border: 1px solid #EA5454;
 }
 
-.search-popover-input:invalid:not(:placeholder-shown) {
-  border-color: #EA5454;
-  border-right: none;
+.invalid-search-popover-input:hover {
+  outline: 2px solid #EA5454;
+  outline-offset: -1px;
 }
 
-.search-popover-input:invalid:hover:not(:placeholder-shown) {
-  border: 2px solid #EA5454;
-  padding: 13px;
-  border-right: none;
+.invalid-search-popover-input:focus-within {
+  outline: 2px solid rgba(234, 84, 84, 0.5);
+  outline-offset: -1px;
+  border-color: transparent;
 }
 
 .search-popover-input:hover + .search-popover-button,
